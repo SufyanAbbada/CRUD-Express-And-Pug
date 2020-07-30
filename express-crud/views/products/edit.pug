@@ -1,0 +1,18 @@
+extends ../layout
+//- Here we will use the simple add form but fill in the values from the product. 
+block content
+    h1 Lets Update this #{prod.name} Product
+    //-Now here we require a new route of Post method because it will go there and edit that. 
+    form(action="/products/edit/"+prod._id,method="post")
+        <div class="form-group">
+            <label for="Product-Name">New Product Name</label>
+            input(type="text" class="form-control" id="Product-Name" value=prod? prod.name:"" name="name" aria-describedby="namehelp")
+            
+            <small id="namehelp" class="form-text text-muted">Lets Change it</small>
+        </div>
+        <div class="form-group">
+            <label for="price">Product Price</label>
+            <input type="text" class="form-control" value=#{prod.price} id="price" name="price">
+        </div>
+        <button type="submit" class="btn btn-danger">Add It</button>
+        a(href="/products", class="btn btn-dark") Back

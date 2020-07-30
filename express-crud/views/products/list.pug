@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/products/add", class="btn btn-success float-right") Add a Product
+    p Lets Show the Data from the Database
+    table.table
+        thead
+            tr
+                th Product Name
+                th Price
+                th Actions
+        tbody
+            each product in data
+                tr
+                    td=product.name
+                    td=product.price
+                    td 
+                        //-Here we simply is getting the 'ID' of the element to delete it
+                        a(href="/products/delete/"+product._id, class="btn btn-danger float-right") Delete 
+                        a(href="/products/edit/"+product._id, class="btn btn-warning float-right") Edit 

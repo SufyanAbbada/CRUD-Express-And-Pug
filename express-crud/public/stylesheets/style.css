@@ -10,3 +10,11 @@ a {
 h1 {
   color: blue;
 }
+
+a > .btn {
+  padding-left: 5px;
+}
+
+a {
+  margin-left: 5px;
+}

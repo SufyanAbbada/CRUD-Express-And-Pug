@@ -6,7 +6,7 @@ var ProductModel = require("../models/ProductModel");
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   let productsshow = await ProductModel.find();
-  console.log(productsshow);
+  //console.log(productsshow);
   //In order to send some variables to the view, we send them using curly braces while rendering that file.
   res.render("products/list", {
     title: "Products From database",

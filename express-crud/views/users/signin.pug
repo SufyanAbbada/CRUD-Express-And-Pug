@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    h1 Lets Give some Area for our Users.
+    form(action='/users/signin', method = 'post')
+        .form-group
+            label(for='exampleInputEmail1') Email address
+            input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name = 'mail')
+            small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+        .form-group
+            label(for='exampleInputPassword1') Password
+            input#exampleInputPassword1.form-control(type='password' placeholder='Password' name = 'pass')
+        button.btn.btn-primary(type='submit' value = 'sign') Log In

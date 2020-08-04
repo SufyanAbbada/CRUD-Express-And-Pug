@@ -5,9 +5,9 @@ block content
     form(action='/users/signin', method = 'post')
         .form-group
             label(for='exampleInputEmail1') Email address
-            input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name = 'mail')
+            input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name = 'mail' value = 'su@gmail.com' )
             small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
         .form-group
             label(for='exampleInputPassword1') Password
-            input#exampleInputPassword1.form-control(type='password' placeholder='Password' name = 'pass')
+            input#exampleInputPassword1.form-control(type='password' placeholder='Password' name = 'pass' value = 'abc123')
         button.btn.btn-primary(type='submit' value = 'sign') Log In

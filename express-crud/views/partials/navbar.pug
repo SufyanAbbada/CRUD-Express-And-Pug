@@ -15,9 +15,15 @@
       <li class="nav-item">
         <a class="nav-link" href="/cart" tabindex="-1">Cart</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/users" tabindex="-1">User</a>
-      </li>
+      if !user
+        <li class="nav-item">
+          <a class="nav-link" href="/users" tabindex="-1">User</a>
+        </li>
+      //-console.log(user);
+      if user
+        <li class="nav-item">
+          <a class="nav-link" href="./users/logout" tabindex="-1">Log Out</a>
+        </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
